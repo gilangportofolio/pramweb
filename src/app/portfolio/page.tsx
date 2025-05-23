@@ -7,7 +7,7 @@ import Image from 'next/image';
 const portfolioCategories = [
   {
     title: 'Desain Grafis',
-    description: 'Kumpulan karya desain grafis kreatif mencakup logo, banner, dan materi visual lainnya.',
+    description: 'Kumpulan karya desain grafis kreatif mencakup poster, banner, dan materi visual lainnya.',
     image: '/portfolio/thumbnail-design.png',
     href: '/portfolio/design-grafis',
     count: '14+ Proyek'
@@ -18,6 +18,13 @@ const portfolioCategories = [
     image: '/portfolio/thumbnail-data.png',
     href: '/portfolio/data-entry',
     count: '6+ Proyek'
+  },
+  {
+    title: 'Manajemen Media Sosial',
+    description: 'Showcase pengelolaan akun, pembuatan konten, dan strategi media sosial di berbagai platform.',
+    image: '/portfolio/thumbnail-sosmed.png',
+    href: '/portfolio/media-sosial',
+    count: '7+ Akun'
   }
 ];
 
@@ -33,7 +40,7 @@ export default function PortfolioPage() {
             className="text-center mb-16"
           >
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="heading-gradient">Portfolio</span>
+              <span className="heading-gradient">PORTFOLIO</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Kumpulan hasil karya dan proyek yang telah saya kerjakan. Pilih kategori di bawah untuk melihat detail portfolio.
