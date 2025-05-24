@@ -1,0 +1,31 @@
+{
+  "testimonials": [
+    {
+      "name": "Gabriel Zefanya Ganesya",
+      "role": "Pemilik Ngemil Snack",
+      "image": "/assets/testi/ngemil.png",
+      "content": "Semenjak akun kami dikelola, perkembangan media sosial jadi jauh lebih terarah. Semua dihandle dengan rapi dari ide konten, bikin reels & feed, sampai admin harian. Sangat profesional dan bisa diandalkan!",
+      "rating": 5,
+      "link": "https://www.instagram.com/ngemil.ml",
+      "linkType": "instagram"
+    },
+    {
+      "name": "Musa Bagus Wicaksono",
+      "role": "Wirausaha",
+      "image": "/assets/testi/musa.jpg",
+      "content": "Pekerjaan jadi jauh lebih terstruktur dan efisien sejak dibantu dalam administrasi dan perapihan dokumen. Teliti, sigap, dan sangat membantu meringankan beban kerja harian saya.",
+      "rating": 5,
+      "link": "https://www.facebook.com/MusaBaguz",
+      "linkType": "facebook"
+    },
+    {
+      "name": "Dewi Fadhilah Soemanagara",
+      "role": "Founder Aksa Academy Indonesia",
+      "image": "/assets/testi/aksa.jpg",
+      "content": "Gilang sangat proaktif dan profesional dalam pengerjaan website. Selain memberikan berbagai input yang membangun untuk kemudahan navigasi website kami, Gilang juga memberikan beberapa opsi yang sesuai dengan target audiens. Mulai dari website, konten, hingga video digarap dengan sangat baik. Kami sangat puas dan senang dengan hasilnya. Kalau kalian mencari freelancer serba bisa yang skillful & going the extra miles, Gilang adalah orang yang tepat. Sukses selalu Gilang!",
+      "rating": 5,
+      "link": "http://lynk.id/aksaacademyindonesia",
+      "linkType": "website"
+    }
+  ]
+} 

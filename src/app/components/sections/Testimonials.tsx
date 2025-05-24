@@ -2,30 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-const testimonials = [
-  {
-    name: 'Sarah Johnson',
-    role: 'CEO, Tech Startup',
-    image: '/testimonials/avatar1.jpg',
-    content: 'Sangat puas dengan layanan yang diberikan. Responsif, profesional, dan hasil kerja yang berkualitas.',
-    rating: 5,
-  },
-  {
-    name: 'Michael Chen',
-    role: 'Digital Marketing Manager',
-    image: '/testimonials/avatar2.jpg',
-    content: 'Kemampuan manajemen sosial media yang luar biasa. Engagement meningkat signifikan sejak menggunakan jasa ini.',
-    rating: 5,
-  },
-  {
-    name: 'Amanda Williams',
-    role: 'Online Shop Owner',
-    image: '/testimonials/avatar3.jpg',
-    content: 'Data entry yang sangat teliti dan terorganisir. Membantu bisnis saya menjadi lebih efisien.',
-    rating: 5,
-  },
-];
+import { useState } from 'react';
+import testimonialsData from '@/app/data/testimonials.json';
 
 const StarRating = ({ rating }: { rating: number }) => {
   return (
@@ -46,37 +24,72 @@ const StarRating = ({ rating }: { rating: number }) => {
   );
 };
 
-export default function Testimonials() {
+const LinkButton = ({ link, linkType }: { link: string; linkType: string }) => {
+  const getLinkText = () => {
+    switch (linkType) {
+      case 'instagram':
+        return 'Kunjungi Instagram';
+      case 'facebook':
+        return 'Kunjungi Facebook';
+      case 'website':
+        return 'Kunjungi Website';
+      default:
+        return 'Kunjungi Link';
+    }
+  };
+
   return (
-    <section id="testimonials" className="section-padding bg-gray-50">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center mt-4 text-blue-600 hover:text-blue-800 transition-colors"
+    >
+      {getLinkText()}
+      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+      </svg>
+    </a>
+  );
+};
+
+export default function Testimonials() {
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
+  const toggleExpand = (id: string) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
+  return (
+    <section id="testimonials" className="section-padding bg-gradient-to-b from-gray-50 to-white">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          transition={{ duration: 1 }}
+          className="text-center mb-2"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="heading-gradient">Testimonial Klien</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="heading-gradient">Partner & Testimonial</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Apa kata mereka tentang layanan Virtual Assistant kami? Simak pengalaman langsung dari klien yang telah menggunakan jasa kami.
+            Bergabung bersama partner terpercaya kami dalam perjalanan sukses bisnis digital
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonialsData.testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              transition={{ duration: 1, delay: index * 0.2 }}
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow"
             >
-              <div className="flex items-center mb-4">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+              <div className="flex flex-col items-center text-center">
+                <div className="relative w-40 h-40 rounded-full overflow-hidden bg-gray-200 mb-4">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
@@ -84,13 +97,24 @@ export default function Testimonials() {
                     className="object-cover"
                   />
                 </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold">{testimonial.name}</h3>
-                  <p className="text-sm text-gray-600">{testimonial.role}</p>
+                <h3 className="text-2xl font-bold mb-1">{testimonial.name}</h3>
+                <p className="text-lg text-gray-600 mb-2">{testimonial.role}</p>
+                <StarRating rating={testimonial.rating} />
+                <div className="relative w-full">
+                  <p className={`mt-3 text-gray-700 text-lg italic ${expandedId !== testimonial.name ? 'line-clamp-3' : ''}`}>
+                    "{testimonial.content}"
+                  </p>
+                  {testimonial.content.length > 150 && (
+                    <button
+                      onClick={() => toggleExpand(testimonial.name)}
+                      className="text-blue-600 hover:text-blue-800 mt-2 text-sm font-medium"
+                    >
+                      {expandedId === testimonial.name ? 'Tutup' : 'Baca Selengkapnya'}
+                    </button>
+                  )}
                 </div>
+                <LinkButton link={testimonial.link} linkType={testimonial.linkType} />
               </div>
-              <StarRating rating={testimonial.rating} />
-              <p className="mt-4 text-gray-600 italic">"{testimonial.content}"</p>
             </motion.div>
           ))}
         </div>
