@@ -26,6 +26,24 @@
       "rating": 5,
       "link": "http://lynk.id/aksaacademyindonesia",
       "linkType": "website"
-    }
+    },
+    {
+        "name": "Bagus Rizky Feriyanto",
+        "role": "Pegawai Swasta",
+        "image": "/assets/testi/rei.png",
+        "content": "Saya beberapa kali membeli akun YouTube Premium dari Gilang dan selalu puas dengan pelayanannya. Proses cepat, jelas, dan tanpa ribet. Sangat bisa dipercaya dan direkomendasikan untuk yang butuh akun langganan dengan aman dan praktis.",
+        "rating": 5,
+        "link": "",
+        "linkType": ""
+      },
+      {
+        "name": "Khotib Sa'ban",
+        "role": "Penggiat Web3",
+        "image": "/assets/testi/simuj.png",
+        "content": "Sebagai penggiat Web3, saya sangat terbantu dengan arahan dan insight dari Gilang dalam merumuskan ide konten dan menganalisis tren pasar crypto. Gilang tidak hanya paham teknis, tapi juga memahami strategi konten yang relevan dan impactful. Partner yang tepat untuk kolaborasi jangka panjang.",
+        "rating": 5,
+        "link": "https://x.com/Simuj17?t=7rQK3pqKJd3vT_sqWITXjQ&s=09",
+        "linkType": "x"
+      }      
   ]
 } 

@@ -38,11 +38,12 @@ const Counter = ({ value, label }: CounterProps) => {
       transition={{ duration: 0.5 }}
       className="relative"
     >
-      <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 text-center transform hover:-translate-y-1">
-        <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3">
-          <motion.span>{rounded}</motion.span>+
+      <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 md:p-8 text-center transform hover:-translate-y-1">
+        <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-3 flex items-center justify-center">
+          <motion.span>{rounded}</motion.span>
+          <span className="ml-1">+</span>
         </div>
-        <div className="text-gray-600 font-medium">{label}</div>
+        <div className="text-sm md:text-base text-gray-600 font-medium">{label}</div>
       </div>
     </motion.div>
   );

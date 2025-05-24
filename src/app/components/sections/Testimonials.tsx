@@ -5,6 +5,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 import testimonialsData from '@/app/data/testimonials.json';
 
+const INITIAL_DISPLAY_COUNT = 6;
+
 const StarRating = ({ rating }: { rating: number }) => {
   return (
     <div className="flex gap-1">
@@ -25,6 +27,8 @@ const StarRating = ({ rating }: { rating: number }) => {
 };
 
 const LinkButton = ({ link, linkType }: { link: string; linkType: string }) => {
+  if (!link || !linkType) return null;
+
   const getLinkText = () => {
     switch (linkType) {
       case 'instagram':
@@ -33,6 +37,8 @@ const LinkButton = ({ link, linkType }: { link: string; linkType: string }) => {
         return 'Kunjungi Facebook';
       case 'website':
         return 'Kunjungi Website';
+      case 'x':
+        return 'Kunjungi X';
       default:
         return 'Kunjungi Link';
     }
@@ -55,10 +61,15 @@ const LinkButton = ({ link, linkType }: { link: string; linkType: string }) => {
 
 export default function Testimonials() {
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [showAll, setShowAll] = useState(false);
 
   const toggleExpand = (id: string) => {
     setExpandedId(expandedId === id ? null : id);
   };
+
+  const displayedTestimonials = showAll 
+    ? testimonialsData.testimonials 
+    : testimonialsData.testimonials.slice(0, INITIAL_DISPLAY_COUNT);
 
   return (
     <section id="testimonials" className="section-padding bg-gradient-to-b from-gray-50 to-white">
@@ -68,18 +79,22 @@ export default function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="text-center mb-2"
+          className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="heading-gradient">Partner & Testimonial</span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Bergabung bersama partner terpercaya kami dalam perjalanan sukses bisnis digital
-          </p>
+  <span className="heading-gradient">Partner & Testimonials</span>
+</h2>
+<p className="text-lg text-gray-600 max-w-3xl mx-auto">
+  Berikut adalah sebagian testimoni nyata dari rekan kerja dan klien yang pernah menggunakan layanan kami — mulai dari kolaborasi jangka panjang hingga kebutuhan praktis harian. 
+  Tidak semua proyek atau klien kami memiliki testimoni yang dipublikasikan, namun kami berterima kasih kepada mereka yang bersedia berbagi pengalamannya. 
+  Anda juga dapat melihat ulasan lainnya melalui halaman <a href="https://www.google.com/maps/place/Gilang+Portofolio/@-6.9200132,107.7200408,17z/data=!4m8!3m7!1s0x2e68dd0c84320b87:0x8b0256f10962726b!8m2!3d-6.9200132!4d107.7226157!9m1!1b1!16s%2Fg%2F11ppyrb2wd?entry=ttu&g_ep=EgoyMDI1MDUyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google Maps kami</a>.
+</p>
+
+
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonialsData.testimonials.map((testimonial, index) => (
+          {displayedTestimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
@@ -113,11 +128,32 @@ export default function Testimonials() {
                     </button>
                   )}
                 </div>
-                <LinkButton link={testimonial.link} linkType={testimonial.linkType} />
+                {testimonial.link && testimonial.linkType && (
+                  <LinkButton link={testimonial.link} linkType={testimonial.linkType} />
+                )}
               </div>
             </motion.div>
           ))}
         </div>
+
+        {testimonialsData.testimonials.length > INITIAL_DISPLAY_COUNT && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="inline-flex items-center px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              {showAll ? 'Tampilkan Sedikit' : 'Lihat Semua Testimonial'}
+              <svg
+                className={`w-5 h-5 ml-2 transform transition-transform ${showAll ? 'rotate-180' : ''}`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

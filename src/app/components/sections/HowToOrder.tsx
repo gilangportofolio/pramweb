@@ -98,7 +98,8 @@ export default function HowToOrder() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Desktop View */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <motion.div
               key={step.title}
@@ -116,6 +117,41 @@ export default function HowToOrder() {
               </div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-gray-600">{step.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile Timeline View */}
+        <div className="md:hidden space-y-6">
+          {steps.map((step, index) => (
+            <motion.div
+              key={step.title}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative"
+            >
+              {/* Timeline Line */}
+              {index !== steps.length - 1 && (
+                <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-blue-200" />
+              )}
+              
+              <div className="flex items-start">
+                {/* Timeline Dot */}
+                <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+                  {step.icon}
+                </div>
+                
+                {/* Content */}
+                <div className="ml-4 flex-1 bg-white rounded-xl p-4 shadow-sm">
+                  <div className="flex items-center mb-2">
+                    <span className="text-lg font-bold text-gray-400 mr-2">0{index + 1}</span>
+                    <h3 className="text-lg font-semibold">{step.title}</h3>
+                  </div>
+                  <p className="text-gray-600 text-sm">{step.description}</p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
