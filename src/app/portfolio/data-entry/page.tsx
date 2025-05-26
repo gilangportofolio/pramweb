@@ -145,7 +145,14 @@ export default function DataEntryPage() {
               transition={{ duration: 0.5 }}
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow font-semibold text-base hover:bg-blue-700 transition"
             >
+              <a
+            href="https://wa.me/62895375455587?text=Halo%20Kak%20Gilang%2C%0A%0ASaya%20tertarik%20dengan%20layanan%20Virtual%20Assistant%20yang%20ditawarkan%20di%20website%20Anda.%20Saya%20ingin%20berkonsultasi%20mengenai%20kebutuhan%20project%20saya.%0A%0ATerima%20kasih."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors inline-flex items-center"
+          >
               Ingin konsultasi atau butuh layanan serupa? <span className="underline">Hubungi saya sekarang!</span>
+            </a>
             </motion.div>
           </div>
         </div>

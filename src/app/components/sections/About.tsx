@@ -51,8 +51,8 @@ const Counter = ({ value, label }: CounterProps) => {
 
 const stats = [
   { label: 'Tahun Pengalaman', value: '5+' },
-  { label: 'Proyek Selesai', value: '5000+' },
-  { label: 'Klien', value: '1000+' },
+  { label: 'Proyek Digital', value: '700+' },
+  { label: 'Proyek Offline', value: '300+' },
   { label: 'Teknologi', value: '20+' },
 ];
 
@@ -122,7 +122,10 @@ export default function About() {
             Saya adalah seorang Virtual Assistant yang berdedikasi membantu klien dari berbagai latar belakang — mulai dari akademik, UMKM, hingga pemilik bisnis online — untuk mengelola tugas digital secara efisien dan fleksibel.
           </p>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mt-4">
-            Kalian bisa memanggil saya pram, dengan pengalaman lebih dari 5 tahun, saya telah menyelesaikan berbagai proyek yang mencakup desain konten, entry data, riset, layanan pelanggan, hingga manajemen konten digital. Semua dilakukan dengan pendekatan yang ramah, profesional, dan tepat waktu.
+          Perkenalkan, saya Pram.
+Dengan pengalaman lebih dari 5 tahun, saya telah menyelesaikan lebih dari 1.000 proyek, yang mencakup lebih dari 700 proyek di bidang entry data, administrasi, dan pengetikan, baik secara online maupun offline, serta lebih dari 300 proyek digital seperti desain konten, manajemen media sosial, dan riset.
+
+Saya menjalankan setiap pekerjaan dengan pendekatan yang ramah, profesional, dan selalu tepat waktu.
           </p>
         </motion.div>
 
