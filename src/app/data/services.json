@@ -1,0 +1,62 @@
+{
+  "id": {
+    "title": "Layanan Virtual Assistant",
+    "description": "Sebagai Virtual Assistant, saya menawarkan berbagai layanan untuk membantu mengoptimalkan operasional bisnis Anda. Dari manajemen media sosial hingga administrasi, setiap layanan dirancang untuk memberikan solusi yang efisien dan berkualitas.",
+    "services": [
+      {
+        "title": "Manajemen Media Sosial",
+        "description": "Pengelolaan akun media sosial bisnis Anda, termasuk pembuatan konten, penjadwalan post, dan interaksi dengan audiens."
+      },
+      {
+        "title": "Data Entry & Administrasi",
+        "description": "Pengelolaan data, input informasi, pembuatan laporan, dan tugas administratif lainnya dengan teliti dan efisien."
+      },
+      {
+        "title": "Desain Konten Digital",
+        "description": "Pembuatan konten visual menarik untuk media sosial, website, dan materi marketing menggunakan tools profesional."
+      },
+      {
+        "title": "Riset & Analisis",
+        "description": "Penelitian pasar, analisis kompetitor, dan pengumpulan data untuk mendukung pengambilan keputusan bisnis Anda."
+      },
+      {
+        "title": "Customer Service",
+        "description": "Penanganan pertanyaan pelanggan, manajemen pesanan, dan dukungan after-sales dengan responsif dan profesional."
+      },
+      {
+        "title": "Manajemen Marketplace",
+        "description": "Pengelolaan toko online di berbagai platform marketplace, termasuk update produk, monitoring stok, dan optimasi listing."
+      }
+    ]
+  },
+  "en": {
+    "title": "Virtual Assistant Services",
+    "description": "As a Virtual Assistant, I offer various services to help optimize your business operations. From social media management to administration, each service is designed to provide efficient and quality solutions.",
+    "services": [
+      {
+        "title": "Social Media Management",
+        "description": "Management of your business social media accounts, including content creation, post scheduling, and audience interaction."
+      },
+      {
+        "title": "Data Entry & Administration",
+        "description": "Data management, information input, report creation, and other administrative tasks with precision and efficiency."
+      },
+      {
+        "title": "Digital Content Design",
+        "description": "Creation of engaging visual content for social media, websites, and marketing materials using professional tools."
+      },
+      {
+        "title": "Research & Analysis",
+        "description": "Market research, competitor analysis, and data collection to support your business decision-making."
+      },
+      {
+        "title": "Customer Service",
+        "description": "Handling customer inquiries, order management, and after-sales support with responsiveness and professionalism."
+      },
+      {
+        "title": "Marketplace Management",
+        "description": "Management of online stores across various marketplace platforms, including product updates, stock monitoring, and listing optimization."
+      }
+    ]
+  }
+} 

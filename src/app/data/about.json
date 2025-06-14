@@ -1,0 +1,62 @@
+{
+  "id": {
+    "title": "Tentang",
+    "description": "Saya adalah seorang Virtual Assistant yang berdedikasi membantu klien dari berbagai latar belakang mulai dari akademik, UMKM, hingga pemilik bisnis online untuk mengelola tugas digital secara efisien dan fleksibel.",
+    "introduction": "Perkenalkan, saya Pram. Dengan pengalaman lebih dari 5 tahun, saya telah menyelesaikan lebih dari 1.000 proyek, yang mencakup lebih dari 700 proyek di bidang entry data, administrasi, dan pengetikan, baik secara online maupun offline, serta lebih dari 300 proyek digital seperti desain konten, manajemen media sosial, dan riset. Saya menjalankan setiap pekerjaan dengan pendekatan yang ramah, profesional, dan selalu tepat waktu.",
+    "skillsTitle": "Keahlian & Tools",
+    "stats": [
+      { "label": "Tahun Pengalaman", "value": "5+" },
+      { "label": "Proyek Digital", "value": "700+" },
+      { "label": "Proyek Offline", "value": "300+" },
+      { "label": "Teknologi", "value": "20+" }
+    ],
+    "skillCategories": [
+      {
+        "title": "Desain & Konten",
+        "description": "Tools dan platform untuk menciptakan konten visual yang menarik"
+      },
+      {
+        "title": "Administrasi & Data",
+        "description": "Aplikasi untuk pengelolaan data dan dokumen profesional"
+      },
+      {
+        "title": "Riset & Support",
+        "description": "Platform AI dan tools untuk riset dan dukungan pelanggan"
+      },
+      {
+        "title": "Platform & Tools",
+        "description": "Marketplace dan tools untuk manajemen proyek"
+      }
+    ]
+  },
+  "en": {
+    "title": "About Me",
+    "description": "I am a dedicated Virtual Assistant helping clients from various backgrounds from academic, SMEs, to online business owners to manage digital tasks efficiently and flexibly.",
+    "introduction": "Hi, I'm Pram. With over 5 years of experience, I have completed more than 1,000 projects, including over 700 projects in data entry, administration, and typing, both online and offline, as well as more than 300 digital projects such as content design, social media management, and research. I approach every task with a friendly, professional, and always timely manner.",
+    "skillsTitle": "Skills & Tools",
+    "stats": [
+      { "label": "Years Experience", "value": "5+" },
+      { "label": "Digital Projects", "value": "700+" },
+      { "label": "Offline Projects", "value": "300+" },
+      { "label": "Technologies", "value": "20+" }
+    ],
+    "skillCategories": [
+      {
+        "title": "Design & Content",
+        "description": "Tools and platforms for creating engaging visual content"
+      },
+      {
+        "title": "Administration & Data",
+        "description": "Applications for professional data and document management"
+      },
+      {
+        "title": "Research & Support",
+        "description": "AI platforms and tools for research and customer support"
+      },
+      {
+        "title": "Platforms & Tools",
+        "description": "Marketplaces and tools for project management"
+      }
+    ]
+  }
+} 

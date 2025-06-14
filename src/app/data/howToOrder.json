@@ -1,0 +1,80 @@
+{
+  "id": {
+    "title": "Cara Pemesanan",
+    "description": "Proses pemesanan yang mudah dan transparan untuk membantu Anda mendapatkan solusi digital terbaik.",
+    "ctaButton": "Mulai Konsultasi",
+    "steps": [
+      {
+        "title": "Konsultasi",
+        "description": "Diskusikan kebutuhan dan ide Anda dengan saya untuk mendapatkan solusi yang tepat."
+      },
+      {
+        "title": "Penawaran",
+        "description": "Dapatkan penawaran harga yang transparan dan sesuai dengan scope pekerjaan Anda."
+      },
+      {
+        "title": "Pembayaran Awal",
+        "description": "Lakukan pembayaran tahap awal sebagai komitmen dimulainya pekerjaan."
+      },
+      {
+        "title": "Pengerjaan",
+        "description": "Proses pengerjaan dimulai sesuai dengan timeline yang telah disepakati."
+      },
+      {
+        "title": "Screening",
+        "description": "Review hasil pekerjaan untuk memastikan kualitas dan kesesuaian dengan kebutuhan."
+      },
+      {
+        "title": "Pelunasan",
+        "description": "Pembayaran tahap akhir setelah hasil pekerjaan disetujui."
+      },
+      {
+        "title": "Free Revisi",
+        "description": "Dapatkan 3x kesempatan revisi gratis dalam kurun waktu 1 bulan."
+      },
+      {
+        "title": "Selesai",
+        "description": "Proyek selesai dan siap digunakan sesuai dengan kebutuhan Anda."
+      }
+    ]
+  },
+  "en": {
+    "title": "How to Order",
+    "description": "An easy and transparent ordering process to help you get the best digital solution.",
+    "ctaButton": "Start Consultation",
+    "steps": [
+      {
+        "title": "Consultation",
+        "description": "Discuss your needs and ideas with me to get the right solution."
+      },
+      {
+        "title": "Quote",
+        "description": "Get transparent pricing that matches your project scope."
+      },
+      {
+        "title": "Initial Payment",
+        "description": "Make an initial payment as a commitment to start the work."
+      },
+      {
+        "title": "Work Process",
+        "description": "The work process begins according to the agreed timeline."
+      },
+      {
+        "title": "Screening",
+        "description": "Review the work results to ensure quality and alignment with requirements."
+      },
+      {
+        "title": "Final Payment",
+        "description": "Final payment after the work results are approved."
+      },
+      {
+        "title": "Free Revisions",
+        "description": "Get 3 free revision opportunities within a 1-month period."
+      },
+      {
+        "title": "Completion",
+        "description": "Project completed and ready to use according to your needs."
+      }
+    ]
+  }
+} 

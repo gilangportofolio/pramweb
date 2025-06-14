@@ -1,0 +1,68 @@
+{
+  "en": {
+    "title": "PORTFOLIO",
+    "description": "A collection of my work and projects. Select a category below to view portfolio details.",
+    "categories": [
+      {
+        "title": "Graphic Design",
+        "description": "Collection of creative graphic design works including posters, banners, and other visual materials.",
+        "image": "/portfolio/thumbnail-design.png",
+        "href": "/portfolio/design-grafis",
+        "count": "14+ Projects",
+        "color": "from-blue-50 to-indigo-50",
+        "viewDetails": "View Details"
+      },
+      {
+        "title": "Data Entry & Administration",
+        "description": "Data management and administration projects using various tools and systems.",
+        "image": "/portfolio/thumbnail-data.png",
+        "href": "/portfolio/data-entry",
+        "count": "6+ Projects",
+        "color": "from-emerald-50 to-teal-50",
+        "viewDetails": "View Details"
+      },
+      {
+        "title": "Social Media Management",
+        "description": "Showcase of account management, content creation, and social media strategies across various platforms.",
+        "image": "/portfolio/thumbnail-sosmed.png",
+        "href": "/portfolio/media-sosial",
+        "count": "7+ Accounts",
+        "color": "from-purple-50 to-pink-50",
+        "viewDetails": "View Details"
+      }
+    ]
+  },
+  "id": {
+    "title": "PORTFOLIO",
+    "description": "Kumpulan hasil karya dan proyek yang telah saya kerjakan. Pilih kategori di bawah untuk melihat detail portfolio.",
+    "categories": [
+      {
+        "title": "Desain Grafis",
+        "description": "Kumpulan karya desain grafis kreatif mencakup poster, banner, dan materi visual lainnya.",
+        "image": "/portfolio/thumbnail-design.png",
+        "href": "/portfolio/design-grafis",
+        "count": "14+ Proyek",
+        "color": "from-blue-50 to-indigo-50",
+        "viewDetails": "Lihat Detail"
+      },
+      {
+        "title": "Data Entry & Administrasi",
+        "description": "Proyek-proyek pengelolaan data dan administrasi menggunakan berbagai tools dan sistem.",
+        "image": "/portfolio/thumbnail-data.png",
+        "href": "/portfolio/data-entry",
+        "count": "6+ Proyek",
+        "color": "from-emerald-50 to-teal-50",
+        "viewDetails": "Lihat Detail"
+      },
+      {
+        "title": "Manajemen Media Sosial",
+        "description": "Showcase pengelolaan akun, pembuatan konten, dan strategi media sosial di berbagai platform.",
+        "image": "/portfolio/thumbnail-sosmed.png",
+        "href": "/portfolio/media-sosial",
+        "count": "7+ Akun",
+        "color": "from-purple-50 to-pink-50",
+        "viewDetails": "Lihat Detail"
+      }
+    ]
+  }
+} 

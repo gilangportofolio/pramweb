@@ -1,33 +1,34 @@
 {
-  "testimonials": [
-    {
-      "name": "Gabriel Zefanya Ganesya",
-      "role": "Pemilik Ngemil Snack",
-      "image": "/assets/testi/ngemil.png",
-      "content": "Semenjak akun kami dikelola, perkembangan media sosial jadi jauh lebih terarah. Semua dihandle dengan rapi dari ide konten, bikin reels & feed, sampai admin harian. Sangat profesional dan bisa diandalkan!",
-      "rating": 5,
-      "link": "https://www.instagram.com/ngemil.ml",
-      "linkType": "instagram"
-    },
-    {
-      "name": "Musa Bagus Wicaksono",
-      "role": "Wirausaha",
-      "image": "/assets/testi/musa.jpg",
-      "content": "Pekerjaan jadi jauh lebih terstruktur dan efisien sejak dibantu dalam administrasi dan perapihan dokumen. Teliti, sigap, dan sangat membantu meringankan beban kerja harian saya.",
-      "rating": 5,
-      "link": "https://www.facebook.com/MusaBaguz",
-      "linkType": "facebook"
-    },
-    {
-      "name": "Dewi Fadhilah Soemanagara",
-      "role": "Founder Aksa Academy Indonesia",
-      "image": "/assets/testi/aksa.jpg",
-      "content": "Gilang sangat proaktif dan profesional dalam pengerjaan website. Selain memberikan berbagai input yang membangun untuk kemudahan navigasi website kami, Gilang juga memberikan beberapa opsi yang sesuai dengan target audiens. Mulai dari website, konten, hingga video digarap dengan sangat baik. Kami sangat puas dan senang dengan hasilnya. Kalau kalian mencari freelancer serba bisa yang skillful & going the extra miles, Gilang adalah orang yang tepat. Sukses selalu Gilang!",
-      "rating": 5,
-      "link": "http://lynk.id/aksaacademyindonesia",
-      "linkType": "website"
-    },
-    {
+  "id": {
+    "testimonials": [
+      {
+        "name": "Gabriel Zefanya Ganesya",
+        "role": "Pemilik Ngemil Snack",
+        "image": "/assets/testi/ngemil.png",
+        "content": "Semenjak akun kami dikelola, perkembangan media sosial jadi jauh lebih terarah. Semua dihandle dengan rapi dari ide konten, bikin reels & feed, sampai admin harian. Sangat profesional dan bisa diandalkan!",
+        "rating": 5,
+        "link": "https://www.instagram.com/ngemil.ml",
+        "linkType": "instagram"
+      },
+      {
+        "name": "Musa Bagus Wicaksono",
+        "role": "Wirausaha",
+        "image": "/assets/testi/musa.jpg",
+        "content": "Pekerjaan jadi jauh lebih terstruktur dan efisien sejak dibantu dalam administrasi dan perapihan dokumen. Teliti, sigap, dan sangat membantu meringankan beban kerja harian saya.",
+        "rating": 5,
+        "link": "https://www.facebook.com/MusaBaguz",
+        "linkType": "facebook"
+      },
+      {
+        "name": "Dewi Fadhilah Soemanagara",
+        "role": "Founder Aksa Academy Indonesia",
+        "image": "/assets/testi/aksa.jpg",
+        "content": "Gilang sangat proaktif dan profesional dalam pengerjaan website. Selain memberikan berbagai input yang membangun untuk kemudahan navigasi website kami, Gilang juga memberikan beberapa opsi yang sesuai dengan target audiens. Mulai dari website, konten, hingga video digarap dengan sangat baik. Kami sangat puas dan senang dengan hasilnya. Kalau kalian mencari freelancer serba bisa yang skillful & going the extra miles, Gilang adalah orang yang tepat. Sukses selalu Gilang!",
+        "rating": 5,
+        "link": "http://lynk.id/aksaacademyindonesia",
+        "linkType": "website"
+      },
+      {
         "name": "Bagus Rizky Feriyanto",
         "role": "Pegawai Swasta",
         "image": "/assets/testi/rei.png",
@@ -44,6 +45,56 @@
         "rating": 5,
         "link": "https://x.com/Simuj17?t=7rQK3pqKJd3vT_sqWITXjQ&s=09",
         "linkType": "x"
-      }      
-  ]
+      }
+    ]
+  },
+  "en": {
+    "testimonials": [
+      {
+        "name": "Gabriel Zefanya Ganesya",
+        "role": "Owner of Ngemil Snack",
+        "image": "/assets/testi/ngemil.png",
+        "content": "Since our account has been managed, social media growth has become much more focused. Everything is handled neatly from content ideas, creating reels & feeds, to daily admin tasks. Very professional and reliable!",
+        "rating": 5,
+        "link": "https://www.instagram.com/ngemil.ml",
+        "linkType": "instagram"
+      },
+      {
+        "name": "Musa Bagus Wicaksono",
+        "role": "Entrepreneur",
+        "image": "/assets/testi/musa.jpg",
+        "content": "Work has become much more structured and efficient since getting help with administration and document organization. Thorough, responsive, and very helpful in lightening my daily workload.",
+        "rating": 5,
+        "link": "https://www.facebook.com/MusaBaguz",
+        "linkType": "facebook"
+      },
+      {
+        "name": "Dewi Fadhilah Soemanagara",
+        "role": "Founder of Aksa Academy Indonesia",
+        "image": "/assets/testi/aksa.jpg",
+        "content": "Gilang is very proactive and professional in website development. Besides providing constructive input for our website navigation, Gilang also offers several options that align with our target audience. From website, content, to video production, everything is handled excellently. We are very satisfied and happy with the results. If you're looking for a versatile freelancer who is skillful & goes the extra mile, Gilang is the right person. Keep up the great work, Gilang!",
+        "rating": 5,
+        "link": "http://lynk.id/aksaacademyindonesia",
+        "linkType": "website"
+      },
+      {
+        "name": "Bagus Rizky Feriyanto",
+        "role": "Private Sector Employee",
+        "image": "/assets/testi/rei.png",
+        "content": "I have purchased YouTube Premium accounts from Gilang several times and am always satisfied with the service. The process is quick, clear, and hassle-free. Very trustworthy and recommended for those who need subscription accounts safely and practically.",
+        "rating": 5,
+        "link": "",
+        "linkType": ""
+      },
+      {
+        "name": "Khotib Sa'ban",
+        "role": "Web3 Enthusiast",
+        "image": "/assets/testi/simuj.png",
+        "content": "As a Web3 enthusiast, I have been greatly helped by Gilang's guidance and insights in formulating content ideas and analyzing crypto market trends. Gilang not only understands the technical aspects but also grasps relevant and impactful content strategies. The right partner for long-term collaboration.",
+        "rating": 5,
+        "link": "https://x.com/Simuj17?t=7rQK3pqKJd3vT_sqWITXjQ&s=09",
+        "linkType": "x"
+      }
+    ]
+  }
 } 

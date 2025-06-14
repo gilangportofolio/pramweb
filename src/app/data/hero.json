@@ -1,0 +1,20 @@
+{
+  "en": {
+    "title": "Gilang Portfolio",
+    "subtitle": "Virtual Assistant",
+    "description": "Reliable solution to ease your technical and professional tasks, both in academic and business worlds.",
+    "buttons": {
+      "services": "Services",
+      "about": "About Me"
+    }
+  },
+  "id": {
+    "title": "Gilang Portofolio",
+    "subtitle": "Virtual Assistant",
+    "description": "Solusi andal untuk meringankan tugas teknis dan profesional Anda, baik dalam dunia akademik maupun bisnis.",
+    "buttons": {
+      "services": "Layanan",
+      "about": "Tentang Saya"
+    }
+  }
+} 

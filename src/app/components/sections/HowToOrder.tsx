@@ -2,11 +2,11 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useLanguage } from '@/app/context/LanguageContext';
+import howToOrderData from '@/app/data/howToOrder.json';
 
-const steps = [
+const icons = [
   {
-    title: 'Konsultasi',
-    description: 'Diskusikan kebutuhan dan ide Anda dengan saya untuk mendapatkan solusi yang tepat.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -14,8 +14,6 @@ const steps = [
     ),
   },
   {
-    title: 'Penawaran',
-    description: 'Dapatkan penawaran harga yang transparan dan sesuai dengan scope pekerjaan Anda.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -23,8 +21,6 @@ const steps = [
     ),
   },
   {
-    title: 'Pembayaran Awal',
-    description: 'Lakukan pembayaran tahap awal sebagai komitmen dimulainya pekerjaan.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -32,8 +28,6 @@ const steps = [
     ),
   },
   {
-    title: 'Pengerjaan',
-    description: 'Proses pengerjaan dimulai sesuai dengan timeline yang telah disepakati.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -41,8 +35,6 @@ const steps = [
     ),
   },
   {
-    title: 'Screening',
-    description: 'Review hasil pekerjaan untuk memastikan kualitas dan kesesuaian dengan kebutuhan.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -51,8 +43,6 @@ const steps = [
     ),
   },
   {
-    title: 'Pelunasan',
-    description: 'Pembayaran tahap akhir setelah hasil pekerjaan disetujui.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -60,8 +50,6 @@ const steps = [
     ),
   },
   {
-    title: 'Free Revisi',
-    description: 'Dapatkan 3x kesempatan revisi gratis dalam kurun waktu 1 bulan.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
@@ -69,8 +57,6 @@ const steps = [
     ),
   },
   {
-    title: 'Selesai',
-    description: 'Proyek selesai dan siap digunakan sesuai dengan kebutuhan Anda.',
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -80,6 +66,9 @@ const steps = [
 ];
 
 export default function HowToOrder() {
+  const { language } = useLanguage();
+  const translations = howToOrderData[language];
+
   return (
     <section id="cara-order" className="section-padding bg-gray-50">
       <div className="container">
@@ -91,16 +80,16 @@ export default function HowToOrder() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="heading-gradient">Cara Pemesanan</span>
+            <span className="heading-gradient">{translations.title}</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Proses pemesanan yang mudah dan transparan untuk membantu Anda mendapatkan solusi digital terbaik.
+            {translations.description}
           </p>
         </motion.div>
 
         {/* Desktop View */}
         <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
+          {translations.steps.map((step, index) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 20 }}
@@ -111,7 +100,7 @@ export default function HowToOrder() {
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-4">
-                  {step.icon}
+                  {icons[index].icon}
                 </div>
                 <span className="text-2xl font-bold text-gray-400">0{index + 1}</span>
               </div>
@@ -123,7 +112,7 @@ export default function HowToOrder() {
 
         {/* Mobile Timeline View */}
         <div className="md:hidden space-y-6">
-          {steps.map((step, index) => (
+          {translations.steps.map((step, index) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, x: -20 }}
@@ -133,14 +122,14 @@ export default function HowToOrder() {
               className="relative"
             >
               {/* Timeline Line */}
-              {index !== steps.length - 1 && (
+              {index !== translations.steps.length - 1 && (
                 <div className="absolute left-6 top-12 bottom-0 w-0.5 bg-blue-200" />
               )}
               
               <div className="flex items-start">
                 {/* Timeline Dot */}
                 <div className="relative z-10 flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
-                  {step.icon}
+                  {icons[index].icon}
                 </div>
                 
                 {/* Content */}
@@ -176,7 +165,7 @@ export default function HowToOrder() {
               height={24}
               className="mr-2"
             />
-            Mulai Konsultasi
+            {translations.ctaButton}
           </a>
         </motion.div>
       </div>

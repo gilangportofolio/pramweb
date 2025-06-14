@@ -4,34 +4,51 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useLanguage } from '@/app/context/LanguageContext';
+import { IndonesianFlag, BritishFlag } from '@/app/components/icons/Flags';
 
-const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/#about' },
-  { name: 'Layanan', href: '/#layanan' },
-  { name: 'Cara Order', href: '/#cara-order' },
-  { name: 'Portfolio', href: '/portfolio' },
-  { name: 'Testimonials', href: '/#testimonials' },
-  { name: 'Connect with me', href: '/#connect-with-me' },
+type NavItem = {
+  name: string;
+  href: string;
+};
+
+const navItems: NavItem[] = [
+  { name: 'home', href: '/' },
+  { name: 'about', href: '/#about' },
+  { name: 'services', href: '/#layanan' },
+  { name: 'howToOrder', href: '/#cara-order' },
+  { name: 'portfolio', href: '/portfolio' },
+  { name: 'testimonials', href: '/#testimonials' },
+  { name: 'connect', href: '/#connect-with-me' },
 ];
+
+const languageOptions = {
+  id: {
+    flag: IndonesianFlag,
+    label: 'ID'
+  },
+  en: {
+    flag: BritishFlag,
+    label: 'EN'
+  }
+};
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
   const [currentHash, setCurrentHash] = useState('');
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
     };
     
-    // Update hash ketika berubah
     const handleHashChange = () => {
       setCurrentHash(window.location.hash.slice(1));
     };
 
-    // Set hash awal
     setCurrentHash(window.location.hash.slice(1));
     
     window.addEventListener('scroll', handleScroll);
@@ -43,11 +60,30 @@ export default function Header() {
     };
   }, []);
 
-  // Fungsi untuk menentukan apakah link aktif
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/';
     if (href.startsWith('/#')) return pathname === '/' && href.slice(2) === currentHash;
     return pathname.startsWith(href);
+  };
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'id' ? 'en' : 'id');
+  };
+
+  const LanguageButton = ({ className = '' }: { className?: string }) => {
+    const Flag = languageOptions[language].flag;
+    return (
+      <button
+        onClick={toggleLanguage}
+        className={`flex items-center gap-2 px-3 py-1.5 rounded-md bg-white/90 hover:bg-white border border-gray-200 transition-colors ${className}`}
+        aria-label={`Change language to ${language === 'id' ? 'English' : 'Indonesian'}`}
+      >
+        <Flag className="rounded-sm shadow-sm" />
+        <span className="text-sm font-medium text-gray-700">
+          {languageOptions[language].label}
+        </span>
+      </button>
+    );
   };
 
   return (
@@ -61,7 +97,7 @@ export default function Header() {
             href="/"
             className="text-xl font-bold heading-gradient"
           >
-            Gilang Portofolio
+            {t('header', 'logo')}
           </Link>
 
           {/* Desktop Navigation */}
@@ -76,40 +112,44 @@ export default function Header() {
                     : 'text-gray-700 hover:text-blue-600'
                 }`}
               >
-                {item.name}
+                {t('header', 'nav', item.name)}
               </Link>
             ))}
+            <LanguageButton />
           </nav>
 
           {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md hover:bg-gray-100"
-            aria-label="Toggle menu"
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+          <div className="flex items-center gap-4 md:hidden">
+            <LanguageButton />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-md hover:bg-gray-100"
+              aria-label="Toggle menu"
             >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
-          </button>
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                {isOpen ? (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                ) : (
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -136,7 +176,7 @@ export default function Header() {
                     }`}
                     onClick={() => setIsOpen(false)}
                   >
-                    {item.name}
+                    {t('header', 'nav', item.name)}
                   </Link>
                 ))}
               </nav>

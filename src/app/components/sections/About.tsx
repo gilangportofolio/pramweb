@@ -4,6 +4,8 @@ import { motion, useInView, animate, useMotionValue, useTransform } from 'framer
 import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { BsRobot } from 'react-icons/bs';
+import { useLanguage } from '@/app/context/LanguageContext';
+import aboutData from '@/app/data/about.json';
 
 interface CounterProps {
   value: string;
@@ -48,13 +50,6 @@ const Counter = ({ value, label }: CounterProps) => {
     </motion.div>
   );
 };
-
-const stats = [
-  { label: 'Tahun Pengalaman', value: '5+' },
-  { label: 'Proyek Digital', value: '700+' },
-  { label: 'Proyek Offline', value: '300+' },
-  { label: 'Teknologi', value: '20+' },
-];
 
 const skillCategories = [
   {
@@ -104,6 +99,9 @@ const skillCategories = [
 ];
 
 export default function About() {
+  const { language } = useLanguage();
+  const translations = aboutData[language];
+
   return (
     <section id="about" className="section-padding bg-gradient-to-b from-gray-50 to-white">
       <div className="container">
@@ -116,22 +114,19 @@ export default function About() {
           className="max-w-4xl mx-auto text-center mb-20"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-8">
-            <span className="heading-gradient">Tentang Saya</span>
+            <span className="heading-gradient">{translations.title}</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            Saya adalah seorang Virtual Assistant yang berdedikasi membantu klien dari berbagai latar belakang — mulai dari akademik, UMKM, hingga pemilik bisnis online — untuk mengelola tugas digital secara efisien dan fleksibel.
+            {translations.description}
           </p>
           <p className="text-lg md:text-xl text-gray-600 leading-relaxed mt-4">
-          Perkenalkan, saya Pram.
-Dengan pengalaman lebih dari 5 tahun, saya telah menyelesaikan lebih dari 1.000 proyek, yang mencakup lebih dari 700 proyek di bidang entry data, administrasi, dan pengetikan, baik secara online maupun offline, serta lebih dari 300 proyek digital seperti desain konten, manajemen media sosial, dan riset.
-
-Saya menjalankan setiap pekerjaan dengan pendekatan yang ramah, profesional, dan selalu tepat waktu.
+            {translations.introduction}
           </p>
         </motion.div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-20">
-          {stats.map((stat) => (
+          {translations.stats.map((stat) => (
             <Counter key={stat.label} {...stat} />
           ))}
         </div>
@@ -145,7 +140,7 @@ Saya menjalankan setiap pekerjaan dengan pendekatan yang ramah, profesional, dan
           className="space-y-12"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-12">
-            <span className="heading-gradient">Keahlian & Tools</span>
+            <span className="heading-gradient">{translations.skillsTitle}</span>
           </h3>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -159,9 +154,9 @@ Saya menjalankan setiap pekerjaan dengan pendekatan yang ramah, profesional, dan
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <h4 className="text-xl font-bold text-blue-600 mb-2">
-                  {category.title}
+                  {translations.skillCategories[categoryIndex].title}
                 </h4>
-                <p className="text-gray-600 mb-6">{category.description}</p>
+                <p className="text-gray-600 mb-6">{translations.skillCategories[categoryIndex].description}</p>
                 <div className="grid grid-cols-3 sm:grid-cols-3 gap-6">
                   {category.skills.map((skill) => (
                     <motion.div

@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import MasonryGallery from '../components/MasonryGallery';
+import { useLanguage } from '@/app/context/LanguageContext';
+import designGrafisData from '@/app/data/design-grafis.json';
 
 interface ImageData {
   src: string;
@@ -12,6 +14,8 @@ interface ImageData {
 }
 
 export default function DesignGrafisPage() {
+  const { language } = useLanguage();
+  const translations = designGrafisData[language];
   const [currentPage, setCurrentPage] = useState(1);
   const [images, setImages] = useState<ImageData[]>([]);
   const [loading, setLoading] = useState(true);
@@ -93,10 +97,10 @@ export default function DesignGrafisPage() {
             className="text-center mb-16"
           >
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="heading-gradient">Desain Grafis Portfolio</span>
+              <span className="heading-gradient">{translations.title}</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Kumpulan karya desain grafis yang telah saya buat. Setiap desain mencerminkan kreativitas dan detail yang teliti.
+              {translations.description}
             </p>
           </motion.div>
 

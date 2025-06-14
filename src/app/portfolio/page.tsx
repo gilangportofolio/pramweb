@@ -3,35 +3,13 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-
-const portfolioCategories = [
-  {
-    title: 'Desain Grafis',
-    description: 'Kumpulan karya desain grafis kreatif mencakup poster, banner, dan materi visual lainnya.',
-    image: '/portfolio/thumbnail-design.png',
-    href: '/portfolio/design-grafis',
-    count: '14+ Proyek',
-    color: 'from-blue-50 to-indigo-50'
-  },
-  {
-    title: 'Data Entry & Administrasi',
-    description: 'Proyek-proyek pengelolaan data dan administrasi menggunakan berbagai tools dan sistem.',
-    image: '/portfolio/thumbnail-data.png',
-    href: '/portfolio/data-entry',
-    count: '6+ Proyek',
-    color: 'from-emerald-50 to-teal-50'
-  },
-  {
-    title: 'Manajemen Media Sosial',
-    description: 'Showcase pengelolaan akun, pembuatan konten, dan strategi media sosial di berbagai platform.',
-    image: '/portfolio/thumbnail-sosmed.png',
-    href: '/portfolio/media-sosial',
-    count: '7+ Akun',
-    color: 'from-purple-50 to-pink-50'
-  }
-];
+import { useLanguage } from '@/app/context/LanguageContext';
+import portfolioData from '@/app/data/portfolio.json';
 
 export default function PortfolioPage() {
+  const { language } = useLanguage();
+  const translations = portfolioData[language];
+
   return (
     <main className="pt-20">
       <section className="section-padding">
@@ -43,15 +21,15 @@ export default function PortfolioPage() {
             className="text-center mb-16"
           >
             <h1 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="heading-gradient">PORTFOLIO</span>
+              <span className="heading-gradient">{translations.title}</span>
             </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Kumpulan hasil karya dan proyek yang telah saya kerjakan. Pilih kategori di bawah untuk melihat detail portfolio.
+              {translations.description}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {portfolioCategories.map((category, index) => (
+            {translations.categories.map((category, index) => (
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -80,7 +58,7 @@ export default function PortfolioPage() {
                       </div>
                       <p className="text-gray-600">{category.description}</p>
                       <div className="mt-4 flex items-center text-blue-600 font-medium">
-                        <span className="group-hover:underline">Lihat Detail</span>
+                        <span className="group-hover:underline">{category.viewDetails}</span>
                         <svg 
                           className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform" 
                           fill="none" 

@@ -1,0 +1,136 @@
+{
+  "en": {
+    "title": "Data Entry & Administration Services",
+    "description": "Below are some services I have worked on for clients from various sectors. Client data and document details are kept confidential, but you can see the range of solutions I offer.",
+    "privacyBadge": "Privacy & Confidentiality Guaranteed",
+    "categories": [
+      {
+        "title": "Data Entry & General Administration",
+        "items": [
+          "Typing trip schedule format (Word & PDF, ready to print)",
+          "Typing company visit schedule format (Word, Excel, PDF)"
+        ]
+      },
+      {
+        "title": "Government Document Writing Assistance",
+        "items": [
+          "Data research from PDF and PowerPoint documents",
+          "Analysis based on field data and previous research",
+          "Risk management preparation using SWOT approach"
+        ]
+      },
+      {
+        "title": "Academic Assistance",
+        "items": [
+          "Thesis Revision - Management & FEB Faculty (Word, Excel, PowerPoint, PDF, SPSS screenshots)",
+          "Thesis Writing - Faculty of Communication Science (FIKOM) (Word, Excel, video transcripts, minutes, PowerPoint, PDF)",
+          "Thesis & Journal - Engineering Faculty (Word, Excel, PDF, PowerPoint, web & desktop applications: XAMPP & SQL Server)",
+          "Thesis Formatting - Public Management Faculty (Word & PDF)"
+        ]
+      },
+      {
+        "title": "Healthcare Institution Services",
+        "items": [
+          "Medical staff data compilation (doctors & nurses) in Excel & PDF format"
+        ]
+      },
+      {
+        "title": "Educational Writing Services",
+        "items": [
+          "Creating elementary to high school papers according to curriculum (Word & PDF)"
+        ]
+      },
+      {
+        "title": "Social & Religious Administration",
+        "items": [
+          "Mosque administration data format for Eid al-Adha & Eid al-Fitr (Word & PDF)"
+        ]
+      },
+      {
+        "title": "Proposal & Legal Documents",
+        "items": [
+          "Price quotation letters (borehole projects & bus stop construction)",
+          "Re-typing ownership asset drafts for administrative purposes"
+        ]
+      },
+      {
+        "title": "Events & Performance",
+        "items": [
+          "Seminar minutes, ready to print & distribute (Word & PDF)",
+          "Lecturer performance reports: data collection, summary preparation, format arrangement (Word, Google Docs, Spreadsheet)"
+        ]
+      }
+    ],
+    "cta": {
+      "text": "Want to consult or need similar services?",
+      "link": "Contact me now!"
+    }
+  },
+  "id": {
+    "title": "Daftar Layanan Data Entry & Administrasi",
+    "description": "Berikut adalah beberapa layanan yang telah saya kerjakan untuk klien dari berbagai sektor. Detail data dan dokumen klien dijaga kerahasiaannya, namun Anda dapat melihat ragam solusi yang saya tawarkan.",
+    "privacyBadge": "Privasi & Kerahasiaan Terjamin",
+    "categories": [
+      {
+        "title": "Data Entry & Administrasi Umum",
+        "items": [
+          "Pengetikan format jadwal trip (Word & PDF, siap cetak)",
+          "Pengetikan format jadwal kunjungan perusahaan (Word, Excel, PDF)"
+        ]
+      },
+      {
+        "title": "Asistensi Penulisan Naskah Dinas – Instansi Pemerintah",
+        "items": [
+          "Riset data dari dokumen PDF dan PowerPoint",
+          "Analisis berdasarkan data lapangan dan riset sebelumnya",
+          "Penyusunan manajemen risiko dengan pendekatan SWOT"
+        ]
+      },
+      {
+        "title": "Asistensi Akademik",
+        "items": [
+          "Revisi Skripsi – Fakultas Manajemen & FEB (Word, Excel, PowerPoint, PDF, screenshot SPSS)",
+          "Penulisan Skripsi – Fakultas Ilmu Komunikasi (FIKOM) (Word, Excel, transkrip video, notulen, PowerPoint, PDF)",
+          "Skripsi & Jurnal – Fakultas Teknik (Word, Excel, PDF, PowerPoint, aplikasi berbasis website & desktop: XAMPP & SQL Server)",
+          "Perapihan Tesis – Fakultas Manajemen Pemerintahan (Word & PDF)"
+        ]
+      },
+      {
+        "title": "Layanan untuk Instansi Kesehatan",
+        "items": [
+          "Rekap data tenaga medis (dokter & perawat) dalam format Excel & PDF"
+        ]
+      },
+      {
+        "title": "Layanan Penulisan Pendidikan",
+        "items": [
+          "Pembuatan makalah tingkat SD hingga SMA sesuai kurikulum (Word & PDF)"
+        ]
+      },
+      {
+        "title": "Administrasi Sosial & Kegiatan Keagamaan",
+        "items": [
+          "Format pendataan administrasi masjid untuk Idul Adha & Idul Fitri (Word & PDF)"
+        ]
+      },
+      {
+        "title": "Dokumen Penawaran & Legalitas",
+        "items": [
+          "Surat penawaran harga (proyek sumur bor & pembuatan halte)",
+          "Pengetikan ulang draft aset kepemilikan untuk keperluan administrasi"
+        ]
+      },
+      {
+        "title": "Acara & Kinerja",
+        "items": [
+          "Surat acara seminar, siap cetak & distribusi (Word & PDF)",
+          "Laporan kinerja dosen: pengumpulan data, penyusunan ringkasan, perapihan format (Word, Google Docs, Spreadsheet)"
+        ]
+      }
+    ],
+    "cta": {
+      "text": "Ingin konsultasi atau butuh layanan serupa?",
+      "link": "Hubungi saya sekarang!"
+    }
+  }
+} 

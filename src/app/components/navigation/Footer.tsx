@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useLanguage } from '@/app/context/LanguageContext';
+import footerData from '@/app/data/footer.json';
 
 const socialLinks = [
   {
@@ -37,22 +39,9 @@ const socialLinks = [
   }
 ];
 
-const trustPoints = [
-  {
-    title: "Kepuasan Anda Prioritas Utama",
-    description: "Saya berkomitmen memberikan layanan terbaik untuk memastikan kepuasan setiap klien."
-  },
-  {
-    title: "Kerahasiaan Terjamin",
-    description: "Privasi dan keamanan data klien adalah hal yang sangat saya junjung tinggi."
-  },
-  {
-    title: "Tanggung Jawab Penuh",
-    description: "Setiap proyek dikerjakan dengan dedikasi penuh hingga selesai dengan sempurna."
-  }
-];
-
 export default function Footer() {
+  const { language } = useLanguage();
+  const translations = footerData[language];
   const year = new Date().getFullYear();
 
   return (
@@ -64,16 +53,16 @@ export default function Footer() {
             <Link href="#home" className="inline-block">
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold heading-gradient">
-                  GILANG PORTOFOLIO
+                  {translations.brand.name}
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  "Ringankan beban teknis Anda dan fokus pada pertumbuhan. Biarkan saya membantu mewujudkan visi Anda dengan solusi yang profesional dan tepat guna."
+                  {translations.brand.tagline}
                 </p>
               </div>
             </Link>
 
             <div className="space-y-6">
-              {trustPoints.map((point, index) => (
+              {translations.trustPoints.map((point, index) => (
                 <motion.div
                   key={point.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -97,20 +86,15 @@ export default function Footer() {
 
           {/* Navigation & Contact */}
           <div className="lg:col-span-3">
-            <h3 className="text-lg font-semibold mb-6">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-6">{translations.quickLinks.title}</h3>
             <ul className="space-y-4">
-              <li>
-                <Link href="/portfolio" className="text-gray-600 hover:text-blue-600 transition-colors">
-                  Portfolio
-                </Link>
-              </li>
-              {['About', 'Layanan', 'Cara Order'].map((item) => (
-                <li key={item}>
+              {translations.quickLinks.links.map((link) => (
+                <li key={link.text}>
                   <Link
-                    href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+                    href={link.href}
                     className="text-gray-600 hover:text-blue-600 transition-colors"
                   >
-                    {item}
+                    {link.text}
                   </Link>
                 </li>
               ))}
@@ -119,7 +103,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div className="lg:col-span-4">
-            <h3 className="text-lg font-semibold mb-6">Hubungi Saya</h3>
+            <h3 className="text-lg font-semibold mb-6">{translations.contact.title}</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center flex-shrink-0">
@@ -128,8 +112,8 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Email</h4>
-                  <p className="text-gray-600">gilang.portofolioo@gmail.com</p>
+                  <h4 className="font-medium">{translations.contact.email.title}</h4>
+                  <p className="text-gray-600">{translations.contact.email.value}</p>
                 </div>
               </div>
 
@@ -140,8 +124,8 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">WhatsApp</h4>
-                  <p className="text-gray-600">+62 895 3754 55587 (Chat only)</p>
+                  <h4 className="font-medium">{translations.contact.whatsapp.title}</h4>
+                  <p className="text-gray-600">{translations.contact.whatsapp.value}</p>
                 </div>
               </div>
 
@@ -153,15 +137,15 @@ export default function Footer() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="font-medium">Lokasi</h4>
-                  <p className="text-gray-600">Bandung, Indonesia</p>
+                  <h4 className="font-medium">{translations.contact.location.title}</h4>
+                  <p className="text-gray-600">{translations.contact.location.value}</p>
                 </div>
               </div>
             </div>
 
             {/* Social Media */}
             <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-6">Connect with me</h3>
+              <h3 className="text-lg font-semibold mb-6">{translations.socialMedia.title}</h3>
               <div className="grid grid-cols-3 sm:grid-cols-6 gap-4">
                 {socialLinks.map((item) => (
                   <motion.a
@@ -193,7 +177,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-16 pt-8 border-t text-center">
-          <p className="text-gray-600">&copy; {year} Gilang Portofolio. All rights reserved.</p>
+          <p className="text-gray-600">{translations.copyright.replace('{year}', year.toString())}</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useLanguage } from '@/app/context/LanguageContext';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
       <div className="container py-20">
@@ -17,12 +20,12 @@ export default function Hero() {
             className="space-y-6 text-center lg:text-left"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-              <span className="heading-gradient">Gilang Portofolio</span>
+              <span className="heading-gradient">{t('hero', 'title')}</span>
               <br />
-              Virtual Assistant
+              {t('hero', 'subtitle')}
             </h1>
             <p className="text-lg text-gray-600 max-w-xl mx-auto lg:mx-0">
-              Solusi andal untuk meringankan tugas teknis dan profesional Anda, baik dalam dunia akademik maupun bisnis.
+              {t('hero', 'description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="#layanan">
@@ -31,7 +34,7 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
-                  Layanan
+                  {t('hero', 'buttons', 'services')}
                 </motion.button>
               </Link>
               <Link href="#about">
@@ -40,7 +43,7 @@ export default function Hero() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-medium hover:bg-blue-50 transition-colors"
                 >
-                  Tentang Saya
+                  {t('hero', 'buttons', 'about')}
                 </motion.button>
               </Link>
             </div>
@@ -58,7 +61,7 @@ export default function Hero() {
               <div className="relative w-full h-full">
                 <Image
                   src="/assets/macot11.png"
-                  alt="Hero Illustration"
+                  alt={`${t('hero', 'title')} - ${t('hero', 'subtitle')}`}
                   fill
                   priority
                   className="object-contain p-4"

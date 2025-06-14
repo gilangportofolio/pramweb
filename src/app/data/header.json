@@ -1,0 +1,26 @@
+{
+  "en": {
+    "logo": "Gilang Portfolio",
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "services": "Services",
+      "howToOrder": "How to Order",
+      "portfolio": "Portfolio",
+      "testimonials": "Testimonials",
+      "connect": "Connect with me"
+    }
+  },
+  "id": {
+    "logo": "Gilang Portfolio",
+    "nav": {
+      "home": "Beranda",
+      "about": "Tentang",
+      "services": "Layanan",
+      "howToOrder": "Cara Order",
+      "portfolio": "Portofolio",
+      "testimonials": "Testimoni",
+      "connect": "Hubungi Saya"
+    }
+  }
+} 

@@ -1,0 +1,122 @@
+{
+  "id": {
+    "brand": {
+      "name": "GILANG PORTOFOLIO",
+      "tagline": "Respon cepat, kualitas tinggi, dan harga terjangkau"
+    },
+    "trustPoints": [
+      {
+        "title": "Kepuasan Anda Prioritas Utama",
+        "description": "Saya berkomitmen memberikan layanan terbaik untuk memastikan kepuasan setiap klien."
+      },
+      {
+        "title": "Kerahasiaan Terjamin",
+        "description": "Privasi dan keamanan data klien adalah hal yang sangat saya junjung tinggi."
+      },
+      {
+        "title": "Tanggung Jawab Penuh",
+        "description": "Setiap proyek dikerjakan dengan dedikasi penuh hingga selesai dengan sempurna."
+      }
+    ],
+    "quickLinks": {
+      "title": "Tautan Cepat",
+      "links": [
+        {
+          "text": "Portfolio",
+          "href": "/portfolio"
+        },
+        {
+          "text": "Tentang",
+          "href": "#about"
+        },
+        {
+          "text": "Layanan",
+          "href": "#layanan"
+        },
+        {
+          "text": "Cara Order",
+          "href": "#cara-order"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Hubungi Saya",
+      "email": {
+        "title": "Email",
+        "value": "gilang.portofolioo@gmail.com"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "+62 895 3754 55587 (Chat only)"
+      },
+      "location": {
+        "title": "Lokasi",
+        "value": "Bandung, Indonesia"
+      }
+    },
+    "socialMedia": {
+      "title": "Media Sosial"
+    },
+    "copyright": "© {year} Gilang Portofolio. Hak Cipta Dilindungi."
+  },
+  "en": {
+    "brand": {
+      "name": "GILANG PORTFOLIO",
+      "tagline": "Fast response, high quality, and affordable price"
+    },
+    "trustPoints": [
+      {
+        "title": "Your Satisfaction is Our Priority",
+        "description": "I am committed to providing the best service to ensure every client's satisfaction."
+      },
+      {
+        "title": "Guaranteed Confidentiality",
+        "description": "Client privacy and data security are highly valued and maintained."
+      },
+      {
+        "title": "Full Responsibility",
+        "description": "Every project is completed with full dedication until perfect completion."
+      }
+    ],
+    "quickLinks": {
+      "title": "Quick Links",
+      "links": [
+        {
+          "text": "Portfolio",
+          "href": "/portfolio"
+        },
+        {
+          "text": "About",
+          "href": "#about"
+        },
+        {
+          "text": "Services",
+          "href": "#layanan"
+        },
+        {
+          "text": "How to Order",
+          "href": "#cara-order"
+        }
+      ]
+    },
+    "contact": {
+      "title": "Contact Me",
+      "email": {
+        "title": "Email",
+        "value": "gilang.portofolioo@gmail.com"
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "value": "+62 895 3754 55587 (Chat only)"
+      },
+      "location": {
+        "title": "Location",
+        "value": "Bandung, Indonesia"
+      }
+    },
+    "socialMedia": {
+      "title": "Social Media"
+    },
+    "copyright": "© {year} Gilang Portfolio. All rights reserved."
+  }
+} 
